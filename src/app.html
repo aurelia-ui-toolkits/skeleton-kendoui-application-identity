@@ -1,0 +1,12 @@
+<template>
+  <require from="./nav-bar"></require>
+  <require from="bootstrap/css/bootstrap.css"></require>
+
+  <!-- Note, Kendo's CSS isn't loaded here, this is done in main.js before Aurelia starts -->
+
+  <nav-bar router.bind="router"></nav-bar>
+
+  <div class="page-host">
+    <router-view></router-view>
+  </div>
+</template>

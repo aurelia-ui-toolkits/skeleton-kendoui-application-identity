@@ -1,0 +1,38 @@
+<template bindable="router">
+  <require from="theme-selector/theme-selector"></require>
+
+  <ul ak-menu>
+    <li>
+      <a route-href="route: welcome" class="${'welcome' | currentRoute: currentRoute}">
+        Welcome
+      </a>
+    </li>
+
+    <li>
+      <a route-href="route: users" class="${'users' | currentRoute: currentRoute}">
+        Users
+      </a>
+    </li>
+
+    <li>
+      <a route-href="route: listview" class="${'listview' | currentRoute: currentRoute}">
+        ListView
+      </a>
+    </li>
+
+    <li click.delegate="showThemeDialog()">
+        <a href="#">Theme</a>
+    </li>
+
+    <li>
+      <a route-href="route: login" class="${'login' | currentRoute: currentRoute} k-last">
+        Login
+      </a>
+    </li>
+  </ul>
+
+  <div ak-window="k-width: 800px; k-title: Themes; k-visible.bind: false; k-widget.bind: dialog"
+       id="themeSelector">
+    <theme-selector></theme-selector>
+  </div>
+</template>

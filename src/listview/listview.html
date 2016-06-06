@@ -1,0 +1,19 @@
+<template>
+  <require from="./listview.css"></require>
+  <section class="au-animate">
+    <h2>KendoUI Listview</h2>
+
+    <ak-list-view k-data-source.bind="dataSource">
+      <ak-template>
+        <div class="product">
+            <img src="http://demos.telerik.com/kendo-ui/content/web/foods/${ProductID}.jpg" alt="${ProductName} image" />
+            <h3>${ProductName}</h3>
+            <p>${UnitPrice}</p>
+        </div>
+      </ak-template>
+    </ak-list-view>
+
+    <div ref="pager" class="k-pager-wrap"></div>
+
+  </section>
+</template>
